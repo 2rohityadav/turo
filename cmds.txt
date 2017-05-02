@@ -1,0 +1,582 @@
+
+rohityadav@rohityadav2-w MINGW64 ~ (master)
+$ cd c
+bash: cd: c: No such file or directory
+
+rohityadav@rohityadav2-w MINGW64 ~ (master)
+$ pwd
+/c/Users/rohityadav
+
+rohityadav@rohityadav2-w MINGW64 ~ (master)
+$ cd c:
+
+rohityadav@rohityadav2-w MINGW64 /c
+$ mkdir github_workspace
+
+rohityadav@rohityadav2-w MINGW64 /c
+$ cd github_workspace
+
+rohityadav@rohityadav2-w MINGW64 /c/github_workspace
+$ mkdir tuto
+
+rohityadav@rohityadav2-w MINGW64 /c/github_workspace
+$ cd tuto
+
+rohityadav@rohityadav2-w MINGW64 /c/github_workspace/tuto
+$ ls
+
+rohityadav@rohityadav2-w MINGW64 /c/github_workspace/tuto
+$ git clone https://github.com/rohyadav/turo.git
+Cloning into 'turo'...
+warning: You appear to have cloned an empty repository.
+Checking connectivity... done.
+
+rohityadav@rohityadav2-w MINGW64 /c/github_workspace/tuto
+$ ls
+turo/
+
+rohityadav@rohityadav2-w MINGW64 /c/github_workspace/tuto
+$ cd turo/
+
+rohityadav@rohityadav2-w MINGW64 /c/github_workspace/tuto/turo (master)
+$
+
+rohityadav@rohityadav2-w MINGW64 /c/github_workspace/tuto/turo (master)
+$ touch README.md
+
+rohityadav@rohityadav2-w MINGW64 /c/github_workspace/tuto/turo (master)
+$ ls
+README.md
+
+rohityadav@rohityadav2-w MINGW64 /c/github_workspace/tuto/turo (master)
+$ vi README.md
+
+rohityadav@rohityadav2-w MINGW64 /c/github_workspace/tuto/turo (master)
+$ gitstatus
+bash: gitstatus: command not found
+
+rohityadav@rohityadav2-w MINGW64 /c/github_workspace/tuto/turo (master)
+$ git status
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        README.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+rohityadav@rohityadav2-w MINGW64 /c/github_workspace/tuto/turo (master)
+$ git add -A
+warning: LF will be replaced by CRLF in README.md.
+The file will have its original line endings in your working directory.
+
+rohityadav@rohityadav2-w MINGW64 /c/github_workspace/tuto/turo (master)
+$ git status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   README.md
+
+
+rohityadav@rohityadav2-w MINGW64 /c/github_workspace/tuto/turo (master)
+$ git commit -m "Added readme.md file"
+[master (root-commit) e742bac] Added readme.md file
+ 1 file changed, 2 insertions(+)
+ create mode 100644 README.md
+
+rohityadav@rohityadav2-w MINGW64 /c/github_workspace/tuto/turo (master)
+$ git push
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 256 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/rohyadav/turo.git
+ * [new branch]      master -> master
+
+rohityadav@rohityadav2-w MINGW64 /c/github_workspace/tuto/turo (master)
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        index.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+rohityadav@rohityadav2-w MINGW64 /c/github_workspace/tuto/turo (master)
+$ git add -A
+
+rohityadav@rohityadav2-w MINGW64 /c/github_workspace/tuto/turo (master)
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   index.html
+
+
+rohityadav@rohityadav2-w MINGW64 /c/github_workspace/tuto/turo (master)
+$ git commit -m "added index.html"
+[master 5bbcdce] added index.html
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 index.html
+
+rohityadav@rohityadav2-w MINGW64 /c/github_workspace/tuto/turo (master)
+$ git push
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 281 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/rohyadav/turo.git
+   e742bac..5bbcdce  master -> master
+
+rohityadav@rohityadav2-w MINGW64 /c/github_workspace/tuto/turo (master)
+$ git stash
+No local changes to save
+
+rohityadav@rohityadav2-w MINGW64 /c/github_workspace/tuto/turo (master)
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+rohityadav@rohityadav2-w MINGW64 /c/github_workspace/tuto/turo (master)
+$ git stash
+Saved working directory and index state WIP on master: 5bbcdce added index.html
+HEAD is now at 5bbcdce added index.html
+
+rohityadav@rohityadav2-w MINGW64 /c/github_workspace/tuto/turo (master)
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+rohityadav@rohityadav2-w MINGW64 /c/github_workspace/tuto/turo (master)
+$ git stash
+Saved working directory and index state WIP on master: 5bbcdce added index.html
+HEAD is now at 5bbcdce added index.html
+
+rohityadav@rohityadav2-w MINGW64 /c/github_workspace/tuto/turo (master)
+$ git commit -m "update index.html"
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+        modified:   index.html
+
+no changes added to commit
+
+rohityadav@rohityadav2-w MINGW64 /c/github_workspace/tuto/turo (master)
+$ git push
+Everything up-to-date
+
+rohityadav@rohityadav2-w MINGW64 /c/github_workspace/tuto/turo (master)
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+rohityadav@rohityadav2-w MINGW64 /c/github_workspace/tuto/turo (master)
+$ git stash
+Saved working directory and index state WIP on master: 5bbcdce added index.html
+HEAD is now at 5bbcdce added index.html
+
+rohityadav@rohityadav2-w MINGW64 /c/github_workspace/tuto/turo (master)
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+rohityadav@rohityadav2-w MINGW64 /c/github_workspace/tuto/turo (master)
+$ git commit -m "updated index.html"
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+        modified:   index.html
+
+no changes added to commit
+
+rohityadav@rohityadav2-w MINGW64 /c/github_workspace/tuto/turo (master)
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+rohityadav@rohityadav2-w MINGW64 /c/github_workspace/tuto/turo (master)
+$ git add -a
+error: unknown switch `a'
+usage: git add [<options>] [--] <pathspec>...
+
+    -n, --dry-run         dry run
+    -v, --verbose         be verbose
+
+    -i, --interactive     interactive picking
+    -p, --patch           select hunks interactively
+    -e, --edit            edit current diff and apply
+    -f, --force           allow adding otherwise ignored files
+    -u, --update          update tracked files
+    -N, --intent-to-add   record only the fact that the path will be added later
+    -A, --all             add changes from all tracked and untracked files
+    --ignore-removal      ignore paths removed in the working tree (same as --no-all)
+    --refresh             don't add, only refresh the index
+    --ignore-errors       just skip files which cannot be added because of errors
+    --ignore-missing      check if - even missing - files are ignored in dry run
+    --chmod <(+/-)x>      override the executable bit of the listed files
+
+
+rohityadav@rohityadav2-w MINGW64 /c/github_workspace/tuto/turo (master)
+$ git add -u
+
+rohityadav@rohityadav2-w MINGW64 /c/github_workspace/tuto/turo (master)
+$ ls
+index.html  README.md
+
+rohityadav@rohityadav2-w MINGW64 /c/github_workspace/tuto/turo (master)
+$ vi index.html
+
+rohityadav@rohityadav2-w MINGW64 /c/github_workspace/tuto/turo (master)
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   index.html
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   index.html
+
+
+rohityadav@rohityadav2-w MINGW64 /c/github_workspace/tuto/turo (master)
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   index.html
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   index.html
+
+
+rohityadav@rohityadav2-w MINGW64 /c/github_workspace/tuto/turo (master)
+$ git stash
+Saved working directory and index state WIP on master: 5bbcdce added index.html
+HEAD is now at 5bbcdce added index.html
+
+rohityadav@rohityadav2-w MINGW64 /c/github_workspace/tuto/turo (master)
+$ git satus
+git: 'satus' is not a git command. See 'git --help'.
+
+Did you mean this?
+        status
+
+rohityadav@rohityadav2-w MINGW64 /c/github_workspace/tuto/turo (master)
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+rohityadav@rohityadav2-w MINGW64 /c/github_workspace/tuto/turo (master)
+$ git add -a
+error: unknown switch `a'
+usage: git add [<options>] [--] <pathspec>...
+
+    -n, --dry-run         dry run
+    -v, --verbose         be verbose
+
+    -i, --interactive     interactive picking
+    -p, --patch           select hunks interactively
+    -e, --edit            edit current diff and apply
+    -f, --force           allow adding otherwise ignored files
+    -u, --update          update tracked files
+    -N, --intent-to-add   record only the fact that the path will be added later
+    -A, --all             add changes from all tracked and untracked files
+    --ignore-removal      ignore paths removed in the working tree (same as --no-all)
+    --refresh             don't add, only refresh the index
+    --ignore-errors       just skip files which cannot be added because of errors
+    --ignore-missing      check if - even missing - files are ignored in dry run
+    --chmod <(+/-)x>      override the executable bit of the listed files
+
+
+rohityadav@rohityadav2-w MINGW64 /c/github_workspace/tuto/turo (master)
+$ git add -A
+
+rohityadav@rohityadav2-w MINGW64 /c/github_workspace/tuto/turo (master)
+$ git commit -m "update index.html"
+[master 5a7c7a2] update index.html
+ 1 file changed, 12 insertions(+)
+
+rohityadav@rohityadav2-w MINGW64 /c/github_workspace/tuto/turo (master)
+$ vi index.html
+
+rohityadav@rohityadav2-w MINGW64 /c/github_workspace/tuto/turo (master)
+$ git satus
+git: 'satus' is not a git command. See 'git --help'.
+
+Did you mean this?
+        status
+
+rohityadav@rohityadav2-w MINGW64 /c/github_workspace/tuto/turo (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+rohityadav@rohityadav2-w MINGW64 /c/github_workspace/tuto/turo (master)
+$ git commit -m "update index.html"
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+Changes not staged for commit:
+        modified:   index.html
+
+no changes added to commit
+
+rohityadav@rohityadav2-w MINGW64 /c/github_workspace/tuto/turo (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+rohityadav@rohityadav2-w MINGW64 /c/github_workspace/tuto/turo (master)
+$ git add -A
+
+rohityadav@rohityadav2-w MINGW64 /c/github_workspace/tuto/turo (master)
+$ git commit -m "update index.html"
+[master 5d9c4ad] update index.html
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+rohityadav@rohityadav2-w MINGW64 /c/github_workspace/tuto/turo (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+nothing to commit, working tree clean
+
+rohityadav@rohityadav2-w MINGW64 /c/github_workspace/tuto/turo (master)
+$ git stash
+No local changes to save
+
+rohityadav@rohityadav2-w MINGW64 /c/github_workspace/tuto/turo (master)
+$ git stash
+Saved working directory and index state WIP on master: 5d9c4ad update index.html
+HEAD is now at 5d9c4ad update index.html
+
+rohityadav@rohityadav2-w MINGW64 /c/github_workspace/tuto/turo (master)
+$ git stash pop
+On branch master
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Dropped refs/stash@{0} (7a538371fcc9360685feb4ffd4146cbaf751ad83)
+
+rohityadav@rohityadav2-w MINGW64 /c/github_workspace/tuto/turo (master)
+$ git add -A
+
+rohityadav@rohityadav2-w MINGW64 /c/github_workspace/tuto/turo (master)
+$ git commit -m "updated index.html"
+On branch master
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+nothing to commit, working tree clean
+
+rohityadav@rohityadav2-w MINGW64 /c/github_workspace/tuto/turo (master)
+$ git push
+Counting objects: 6, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 717 bytes | 0 bytes/s, done.
+Total 6 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/rohyadav/turo.git
+   5bbcdce..5d9c4ad  master -> master
+
+rohityadav@rohityadav2-w MINGW64 /c/github_workspace/tuto/turo (master)
+$ git branch turo_newBranch
+
+rohityadav@rohityadav2-w MINGW64 /c/github_workspace/tuto/turo (master)
+$ git staus
+git: 'staus' is not a git command. See 'git --help'.
+
+Did you mean this?
+        status
+
+rohityadav@rohityadav2-w MINGW64 /c/github_workspace/tuto/turo (master)
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+nothing to commit, working tree clean
+
+rohityadav@rohityadav2-w MINGW64 /c/github_workspace/tuto/turo (master)
+$ git checkout turo_newBranch
+Switched to branch 'turo_newBranch'
+
+rohityadav@rohityadav2-w MINGW64 /c/github_workspace/tuto/turo (turo_newBranch)
+$ git status
+On branch turo_newBranch
+nothing to commit, working tree clean
+
+rohityadav@rohityadav2-w MINGW64 /c/github_workspace/tuto/turo (turo_newBranch)
+$ touch newBranch.html
+
+rohityadav@rohityadav2-w MINGW64 /c/github_workspace/tuto/turo (turo_newBranch)
+$ git add *
+
+rohityadav@rohityadav2-w MINGW64 /c/github_workspace/tuto/turo (turo_newBranch)
+$ git commit -m "added newBranch.html"
+[turo_newBranch 23ae8c6] added newBranch.html
+ 1 file changed, 12 insertions(+)
+ create mode 100644 newBranch.html
+
+rohityadav@rohityadav2-w MINGW64 /c/github_workspace/tuto/turo (turo_newBranch)
+$ git push origin turo_newBranch
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 510 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/rohyadav/turo.git
+ * [new branch]      turo_newBranch -> turo_newBranch
+
+rohityadav@rohityadav2-w MINGW64 /c/github_workspace/tuto/turo (turo_newBranch)
+$ ls
+index.html  newBranch.html  README.md
+
+rohityadav@rohityadav2-w MINGW64 /c/github_workspace/tuto/turo (turo_newBranch)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up-to-date with 'origin/master'.
+
+rohityadav@rohityadav2-w MINGW64 /c/github_workspace/tuto/turo (master)
+$ touch config.php
+
+rohityadav@rohityadav2-w MINGW64 /c/github_workspace/tuto/turo (master)
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        config.php
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+rohityadav@rohityadav2-w MINGW64 /c/github_workspace/tuto/turo (master)
+$ touch .gitignore
+
+rohityadav@rohityadav2-w MINGW64 /c/github_workspace/tuto/turo (master)
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        .gitignore
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+rohityadav@rohityadav2-w MINGW64 /c/github_workspace/tuto/turo (master)
+$ git add .gitignore
+
+rohityadav@rohityadav2-w MINGW64 /c/github_workspace/tuto/turo (master)
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   .gitignore
+
+
+rohityadav@rohityadav2-w MINGW64 /c/github_workspace/tuto/turo (master)
+$ git commit -m "added gitignore"
+[master 26dc852] added gitignore
+ 1 file changed, 1 insertion(+)
+ create mode 100644 .gitignore
+
+rohityadav@rohityadav2-w MINGW64 /c/github_workspace/tuto/turo (master)
+$ git push
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 325 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/rohyadav/turo.git
+   5d9c4ad..26dc852  master -> master
+
+rohityadav@rohityadav2-w MINGW64 /c/github_workspace/tuto/turo (master)
+$
